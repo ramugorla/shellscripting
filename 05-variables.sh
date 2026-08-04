@@ -2,5 +2,10 @@
 
 echo "Please enter your username: "
 
-read USERNAME
+read -s USERNAME
 
+#  -s will hide your prompt
+
+echo "Please enter your Password: "
+
+read -s PASSWORD
