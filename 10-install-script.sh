@@ -14,4 +14,6 @@ fi
 echo "Script is executed at: $TIMESTAMP"
 
 
-dnf install mysql -y 
+dnf install mysqll -y 
+
+dnf install git -y
