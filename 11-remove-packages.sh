@@ -15,6 +15,7 @@ then
     if [ $? -ne 0 ]
     then
         echo "Removing MYSQL ... FAILURE"
+        exit 1
     else
         echo "Removing MYSQL ... SUCCESS"
     fi 

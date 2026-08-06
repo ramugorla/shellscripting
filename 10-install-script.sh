@@ -20,6 +20,7 @@ then
     if [ $? -ne 0 ]
     then
         echo "Installing MYSQL ... FAILURE"
+        exit 1
     else
         echo "Installing MYSQL ... SUCCESS"
     fi 
@@ -33,6 +34,7 @@ fi
 # if [ $? -ne 0 ]
 # then
 #     echo "Installing MYSQL ... FAILURE"
+#     exit 1
 # else
 #     echo "Installing MYSQL ... SUCCESS"
 # fi
@@ -45,6 +47,7 @@ then
     if [ $? -ne 0 ]
     then
         echo "Installing GIT ... FAILURE"
+        exit 1
     else
         echo "Installing GIT ... SUCCESS"
     fi
@@ -56,6 +59,7 @@ fi
 # if [ $? -ne 0 ]
 # then
 #     echo "Installing GIT ... FAILURE"
+#     exit 1
 # else
 #     echo "Installing GIT ... SUCCESS"
 # fi
