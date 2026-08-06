@@ -23,6 +23,9 @@ check_root(){
     fi 
 }
 
+check_root
+
+
 mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
@@ -36,8 +39,6 @@ VALIDATE(){
 
 
 
-
-check_root
 
 
 dnf list installed gcc 
