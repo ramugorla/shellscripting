@@ -31,6 +31,7 @@ do
     then 
         dnf install $package -y 
         VALIDATE $? "Installing $package"
+        exit 1 
     else
         echo -e "$package is already ... $Y Installed $N"
     fi
