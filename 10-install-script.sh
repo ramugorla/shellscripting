@@ -13,19 +13,49 @@ fi
 
 echo "Script is executed at: $TIMESTAMP"
 
-
-dnf install mysql -y
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
-    echo "Installing MYSQL ... FAILURE"
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then
+        echo "Installing MYSQL ... FAILURE"
+    else
+        echo "Installing MYSQL ... SUCCESS"
+    fi 
 else
-    echo "Installing MYSQL ... SUCCESS"
+    echo "MYSQL is Already ... Installed"
 fi 
 
-dnf install git -y
+
+
+# dnf install mysql -y
+# if [ $? -ne 0 ]
+# then
+#     echo "Installing MYSQL ... FAILURE"
+# else
+#     echo "Installing MYSQL ... SUCCESS"
+# fi
+
+
+dnf list installed git 
 if [ $? -ne 0 ]
 then
-    echo "Installing GIT ... FAILURE"
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "Installing GIT ... FAILURE"
+    else
+        echo "Installing GIT ... SUCCESS"
+    fi
 else
-    echo "Installing GIT ... SUCCESS"
-fi
+    echo "Git is already ... Installed"
+fi 
+
+# dnf install git -y
+# if [ $? -ne 0 ]
+# then
+#     echo "Installing GIT ... FAILURE"
+# else
+#     echo "Installing GIT ... SUCCESS"
+# fi
