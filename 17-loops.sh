@@ -30,8 +30,7 @@ do
     if [ $? -ne 0 ]
     then 
         dnf install $package -y 
-        VALIDATE $? "Installing $package"
-        exit 1 
+        VALIDATE $? "Installing $package" 
     else
         echo -e "$package is already ... $Y Installed $N"
     fi
