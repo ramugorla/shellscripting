@@ -14,7 +14,7 @@ fi
 echo "Script is executed at: $TIMESTAMP"
 
 
-dnf install mysqll -y
+dnf install mysql -y
 if [ $? -ne 0 ]
 then
     echo "Installing MYSQL ... FAILURE"
