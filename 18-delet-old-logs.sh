@@ -21,6 +21,8 @@ Files_to_be_deleted=$(find $SOURCE_DIR -name "*.log" -mtime +14 | awk -F "/" '{p
 
 while read -r file
 do 
-    echo $file
+    echo "deleting_files: $file"
+    rm -rf $file
+    echo "Deleted_files: $file"
 
-done <<<$Files_to_be_deleted
+done <<<$Files_to_be_deleted  # this for reading the file output 
