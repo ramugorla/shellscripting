@@ -14,7 +14,7 @@ SOURCE_DIR="/home/ec2-user/shell-logs"
 mkdir -p $SOURCE_DIR
 
 
-Files_to_be_deleted=$(find $SOURCE_DIR -name "*.log" -mtime +14 | awk -F "/" '{print $NF}')
+Files_to_be_deleted=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 
 # echo $Files_to_be_deleted
 
