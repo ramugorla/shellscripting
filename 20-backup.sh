@@ -57,6 +57,9 @@ then
         while read -r file
         do 
             echo $file
+            echo "Deleting Files: $file"
+            rm -rf $file 
+            echo "Deleted Files are: $file"
 
         done <<< "$FILES"
 
