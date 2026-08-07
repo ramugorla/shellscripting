@@ -25,4 +25,4 @@ do
     rm -rf $file
     echo "Deleted_files: $file"
 
-done <<<$Files_to_be_deleted  # this for reading the file output 
+done <<< $Files_to_be_deleted  # this for reading the file output 
