@@ -36,6 +36,6 @@ then
     echo "$SOURCE_DIR Does not exist ... Please Check"
 fi
 
-FILES=$(find $SOURCE_DIR -name "*.log")
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 echo $FILES
