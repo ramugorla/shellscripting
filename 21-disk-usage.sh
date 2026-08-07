@@ -12,9 +12,11 @@ do
     #echo "Partion is $PARTION and usage is $USAGE"
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
-        MSG+="High disk usage on partiotion $PARTION and disk usage is $USAGE"
+        MSG+="High disk usage on partiotion $PARTION and disk usage is $USAGE /n"
     fi
 
 done <<< $DISK_USAGE
 
-echo $MSG
+# echo $MSG
+
+echo -e "Message is $MSG" 
