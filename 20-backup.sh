@@ -12,6 +12,7 @@ DAYS=${3:-14}
 
 SOURCE="/home/ec2-user/app-logs"
 DEST="/home/ec2-user/archieve"
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 USAGE(){
     echo "USAGE:: <SOURCE_DIR> <DEST_DIR> <DAYS(Optional)>"
@@ -39,3 +40,22 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 echo $FILES
+
+if [ -n $FILES ] #true if there are files
+then
+    echo "Files to zip"
+    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP"
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | Zip -@ "$ZIP_FILE"
+    if [ ! -f "$ZIP_FILE" ]
+    then
+        echo "Succefully created Zip file"
+        while read -r file
+        do 
+            echo $file
+
+        done >>> $FILES
+
+    else
+        echo "failed to create a zip file"
+else
+    echo "No files found older than $DAYS"
