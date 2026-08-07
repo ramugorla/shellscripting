@@ -41,7 +41,7 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
 echo $FILES
 
-if [ -n $FILES ] #true if there are files
+if [ -n "$FILES" ] #true if there are files
 then
     echo "Files to zip"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP"
