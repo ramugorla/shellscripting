@@ -30,7 +30,8 @@ do
     if [ $? -ne 0 ]
     then 
         dnf install $package -y 
-        VALIDATE $? "Installing $package" 
+        VALIDATE $? "Installing $package"
+        #exit 1  inside the for loop.As soon as the first package (for example, nginx) is installed successfully, your script executes: 
     else
         echo -e "$package is already ... $Y Installed $N"
     fi
