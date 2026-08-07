@@ -53,7 +53,7 @@ then
         do 
             echo $file
 
-        done >>> "$FILES"
+        done <<< "$FILES"
 
     else
         echo "failed to create a zip file"
