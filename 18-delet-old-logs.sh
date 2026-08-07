@@ -16,11 +16,11 @@ mkdir -p $SOURCE_DIR
 
 Files_to_be_deleted=$(find $SOURCE_DIR -name "*.log" -mtime +14 | awk -F "/" '{print $NF}')
 
-echo $Files_to_be_deleted
+# echo $Files_to_be_deleted
 
 
 while read -r file
 do 
     echo $file
-    
+
 done <<<$Files_to_be_deleted
