@@ -51,6 +51,30 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-echo "Files to be deletd: $FILES"
+#echo "Files to be deletd: $FILES"
+
+if [ -n "$FILES" ]
+then
+    echo "Files to zip"
+    ZIP_FILE="$DEST_DIR/app-log-$TIMESTAMP"
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
+    if [ ! -f "$ZIP_FILE" ]
+    then
+        echo "Succefully created Zip file"
+        while read -r file
+        do 
+            echo $file
+            echo "Deleting Files: $file"
+            rm -rf $file 
+            echo "Deleted Files are: $file"
+
+        done <<< "$FILES"
+
+    else
+        echo "failed to create a zip file"
+
+else
+    echo "No files found older than $DAYS"
+fi 
 
 
