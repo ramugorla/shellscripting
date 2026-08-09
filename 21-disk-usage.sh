@@ -20,3 +20,4 @@ done <<< $DISK_USAGE
 # echo $MSG
 
 echo -e "Message is $MSG" 
+
