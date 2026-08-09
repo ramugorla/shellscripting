@@ -37,5 +37,5 @@ do
     echo "Files to be deleted: $FILES" &>>$LOG_FILE_NAME
     rm -rf $FILES
     echo "Deleted Files: $FILES" &>>$LOG_FILE_NAME
-done 
+done <<<$FILES
 
