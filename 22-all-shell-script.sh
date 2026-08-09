@@ -74,3 +74,12 @@ else
     echo "Given $NUMBER is less than 15"
 fi 
 
+
+
+
+if [ $NUMBER/2 -eq 0 ]
+then
+    echo "Given $NUMBER is even"
+else
+    echo "Given $NUMBER is odd"
+fi
