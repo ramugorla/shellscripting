@@ -30,7 +30,7 @@ mkdir -p $LOGS_FOLDER
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 
-echo "Files to be deleted: $FILES"
+echo "Files to be deleted: $FILES"  &>>$LOG_FILE_NAME
 
 
 
