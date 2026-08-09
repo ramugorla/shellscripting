@@ -34,8 +34,8 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 
 while read -r file
 do 
-    echo "Files to be deleted: $file" &>>$LOG_FILE_NAME
+    echo "Files to be deleted: $file" 
     rm -rf $file
-    echo "Deleted Files: $file" &>>$LOG_FILE_NAME
+    echo "Deleted Files: $file" 
 done <<<$FILES
 
