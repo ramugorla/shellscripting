@@ -5,11 +5,11 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 
-if [ $USERID -ne 0 ]
-then
-    echo "NOTIFY:: You need root access to create the dir in /var/log"
-    exit 1
-fi
+# if [ $USERID -ne 0 ]
+# then
+#     echo "NOTIFY:: You need root access to create the dir in /var/log"
+#     exit 1
+# fi
 
 
 SOURCE_DIR=$1
@@ -29,7 +29,7 @@ mkdir -p /home/ec2-user/archives
 mkdir -p $LOGS_FOLDER
 
 USAGE(){
-    echo $R "USAGE:: $N <SOURCE_DIR> <DEST_DIR> <DAYS(Optional)>"
+    echo -e $R "USAGE:: $N <SOURCE_DIR> <DEST_DIR> <DAYS(Optional)>"
 }
 
 if [ $# -lt 2 ]
