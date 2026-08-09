@@ -58,7 +58,7 @@ then
     echo "Files to zip"
     ZIP_FILE="$DEST_DIR/app-log-$TIMESTAMP"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
-    if [ ! -f "$ZIP_FILE" ]
+    if [ -f "$ZIP_FILE" ]
     then
         echo "Succefully created Zip file"
         while read -r file
