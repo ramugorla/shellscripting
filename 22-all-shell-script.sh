@@ -13,3 +13,11 @@ echo "${PERSON2}: Hlo $PERSON1"
 echo "$PERSON1: H R U $PERSON2"
 echo "$PERSON2: Fyn $PERSON1 and wt abt U"
 
+PERSON1=$1
+PERSON2=$2
+
+
+echo "$PERSON1: Hi $PERSON2"
+echo "${PERSON2}: Hlo $PERSON1"
+echo "$PERSON1: H R U $PERSON2"
+echo "$PERSON2: Fyn $PERSON1 and wt abt U"
