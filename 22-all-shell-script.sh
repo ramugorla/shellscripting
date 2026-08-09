@@ -83,3 +83,20 @@ then
 else
     echo "Given $NUMBER is odd"
 fi
+
+
+if [ $((NUMBER%2)) -ne 0 ]
+
+then
+    echo "Given $NUMBER is even"
+else
+    echo "Given $NUMBER is odd"
+fi
+
+
+if [ $((NUMBER%2)) -le 0 ]
+then
+    echo "Given $NUMBER is even"
+else
+    echo "Given $NUMBER is odd"
+fi
