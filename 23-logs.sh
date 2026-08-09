@@ -1,11 +1,18 @@
 #!/bin/bash 
 
+USERID=$(id -u)
+
 
 N="\e[0m"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 
+if [ $USERID -ne 0 ]
+then
+    echo "NOTIFY:: You need root access to create the dir in /var/log"
+
+fi
 
 
 SOURCE_DIR="/home/ec2-user/app-logs"
