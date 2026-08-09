@@ -11,7 +11,7 @@ Y="\e[33m"
 if [ $USERID -ne 0 ]
 then
     echo "NOTIFY:: You need root access to create the dir in /var/log"
-
+    exit 1
 fi
 
 
