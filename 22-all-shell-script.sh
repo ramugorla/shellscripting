@@ -21,3 +21,9 @@ echo "$PERSON1: Hi $PERSON2"
 echo "${PERSON2}: Hlo $PERSON1"
 echo "$PERSON1: H R U $PERSON2"
 echo "$PERSON2: Fyn $PERSON1 and wt abt U"
+
+
+echo "Please enter your user name: "
+
+read USERNAME
+
