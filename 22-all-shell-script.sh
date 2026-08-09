@@ -36,12 +36,19 @@
 # echo "$PASSWORD"
 
 
-NUMBER1=$1
-NUMBER2=$2
+# NUMBER1=$1
+# NUMBER2=$2
 
-SUM=$(( $NUMBER1 + $NUMBER2 ))
+# SUM=$(( $NUMBER1 + $NUMBER2 ))
 
-echo "Sum of $NUMBER1 and $NUMBER2 is: $SUM"
+# echo "Sum of $NUMBER1 and $NUMBER2 is: $SUM"
 
-echo $(date)
+# echo $(date)
 
+
+MOVIES=("Devara" "rrr" "OG")
+
+echo "First Movies is: ${MOVIES[0]}"
+echo "Second Movie is: ${MOVIES[1]}"
+echo "Last Movie is: ${MOVIES[-1]}"
+echo "List of all Movies are: ${MOVIES[@]}"
