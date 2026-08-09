@@ -77,7 +77,7 @@ fi
 
 
 
-if [ $NUMBER/2 -eq 0 ]
+if [ $NUMBER%2 -eq 0 ]
 then
     echo "Given $NUMBER is even"
 else
