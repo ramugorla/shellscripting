@@ -1,0 +1,29 @@
+#!/bin/bash 
+
+
+N="\e[0m"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+
+
+
+SOURCE_DIR="/home/ec2-user/app-logs"
+
+
+LOGS_FOLDER="/var/log/shellscript-logs"
+LOGS_FILE=$(echo $0 | awk -F "/" '{print $NF}' | cut -d "." -f1)
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
+LOG_FILE_NAME="$LOGS_FOLDER/$LOGS_FILE-$TIMESTAMP"
+
+
+mkdir -p $SOURCE_DIR
+mkdir -p $LOGS_FOLDER
+
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
+
+echo "Files to be deleted: $FILES"
+
+
+
