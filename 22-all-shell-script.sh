@@ -25,5 +25,13 @@ echo "$PERSON2: Fyn $PERSON1 and wt abt U"
 
 echo "Please enter your user name: "
 
-read USERNAME
+read -s USERNAME
+
+echo "$USERNAME"
+
+echo "Please enter your password: "
+
+read -s PASSWORD 
+
+echo "$PASSWORD"
 
