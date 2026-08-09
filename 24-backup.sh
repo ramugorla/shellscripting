@@ -48,3 +48,9 @@ then
     echo -e "$DEST_DIR Does not exist ... $Y please check $N"
 fi
 
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+
+echo "Files to be deletd: $FILES"
+
+
